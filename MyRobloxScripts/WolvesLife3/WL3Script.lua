@@ -1,1 +1,0 @@
---not posting till I finish it up, it's not a good script anyways. might remake it soon.
