@@ -1,3 +1,5 @@
+_G.DZPlayerSpeed = 30
+_G.DZPlayerJumpPower = 76
 local CreateBrokenLegGui = function(Location)
 	local InputScript = Instance.new("LocalScript")
 	InputScript.Name = "Input"
