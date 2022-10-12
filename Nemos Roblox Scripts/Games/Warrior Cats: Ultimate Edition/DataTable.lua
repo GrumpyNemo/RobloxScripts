@@ -15,7 +15,7 @@ data.Sizes = {
     "Warrior",
     "Large Warrior"
 }
-data.Roles {
+data.Roles = {
     "Warrior",
     "Apprentice",
     "Kit",
