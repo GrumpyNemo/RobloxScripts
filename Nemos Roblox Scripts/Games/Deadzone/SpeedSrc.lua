@@ -33,14 +33,14 @@ SpeedSrc.SpeedHack = function()
 			local KeyCodeName = input.KeyCode.Name
 			if KeyCodeName == "Space" then
 				if tick() - Tick1 >= 0.8 then
-					Humanoid.JumpPower = 26
+					Humanoid.JumpPower = getgenv().JumpPower
 					Humanoid.Jump = true
 					Tick1 = tick()
 					wait()
-					Humanoid.JumpPower = 0
+					Humanoid.JumpPower = getgenv().JumpPower
 				else
 					Humanoid.Jump = false
-					Humanoid.JumpPower = 0
+					Humanoid.JumpPower = getgenv().JumpPower
 				end
 
 			elseif KeyCodeName == "X" then
