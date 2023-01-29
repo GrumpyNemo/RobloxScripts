@@ -1,4 +1,4 @@
-local vers = "0.7"
+local vers = "0.8"
 if not getgenv().DeadzoneTab then
 	getgenv().DeadzoneTab = getgenv().NemoHubWindow:CreateTab("Deadzone Classic".." | "..vers, "2716943887")
 	----------------------------------------------
