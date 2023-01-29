@@ -10,9 +10,9 @@ iRay  | Programming
 
 
 
-local Release = "Custom | Beta 7R"
+local Release = "0M3N Custom | Beta 7R"
 local NotificationDuration = 6.5
-local RayfieldFolder = "Rayfield"
+local RayfieldFolder = "0M3N"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 
@@ -22,8 +22,8 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextFont = "Default", -- Default will use the various font faces used across Rayfield
-			TextColor = Color3.fromRGB(240, 240, 240),
+			TextFont = "Creepster", -- Default will use the various font faces used across Rayfield
+			TextColor = Color3.fromRGB(255, 128, 0),
 			
 			Background = Color3.fromRGB(25, 25, 25),
 			Topbar = Color3.fromRGB(34, 34, 34),
