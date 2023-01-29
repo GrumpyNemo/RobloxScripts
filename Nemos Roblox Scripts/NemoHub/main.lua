@@ -18,7 +18,7 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 	}
 })
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
-local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Forking \nshlex | Designing & Programming \niRay | Programming"})
+local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
 ---
 local ToolsTab = getgenv().NemoHubWindow:CreateTab("Tools", 10885640682)
 local Button = ToolsTab:CreateButton({
