@@ -33,14 +33,14 @@ SpeedSrc.SpeedHack = function()
 			local KeyCodeName = input.KeyCode.Name
 			if KeyCodeName == "Space" then
 				if tick() - Tick1 >= 0.8 then
-					Humanoid.JumpPower = getgenv().JumpPower or 26
+					Humanoid.JumpPower = getgenv().JumpPower
 					Humanoid.Jump = true
 					Tick1 = tick()
 					wait()
-					Humanoid.JumpPower = getgenv().JumpPower or 0
+					Humanoid.JumpPower = getgenv().JumpPower
 				else
 					Humanoid.Jump = false
-					Humanoid.JumpPower = getgenv().JumpPower or 0
+					Humanoid.JumpPower = getgenv().JumpPower
 				end
 
 			elseif KeyCodeName == "X" then
@@ -108,7 +108,7 @@ SpeedSrc.SpeedHack = function()
 		if not PlayerIsFrozen then
 			if UserInputService:IsKeyDown("LeftShift") --[[and not LegBroken]] then
 				if PostureValue == 0 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 22
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 				if PostureValue == 1 then
@@ -123,37 +123,37 @@ SpeedSrc.SpeedHack = function()
 				end
 			elseif LegBroken then
 				if PostureValue == 0 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 10
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 				if PostureValue == 1 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 5
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 				if PostureValue == 2 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 1
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 			else
 				if PostureValue == 0 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 16
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 				if PostureValue == 1 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 8
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 				if PostureValue == 2 then
-					Humanoid.WalkSpeed = getgenv().WalkSpeed or 1
+					Humanoid.WalkSpeed = getgenv().WalkSpeed
 					return
 				end
 			end
 		else
-			Humanoid.WalkSpeed = getgenv().WalkSpeed or 0
+			Humanoid.WalkSpeed = getgenv().WalkSpeed
 			if Humanoid.Health <= 0 and not PlayerIsFrozen then
 				Humanoid.AutoRotate = true
 			end
-			Humanoid.JumpPower = getgenv().JumpPower or 0
+			Humanoid.JumpPower = getgenv().JumpPower
 		end
 	end)
 end
