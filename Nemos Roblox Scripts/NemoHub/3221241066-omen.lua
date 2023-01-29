@@ -93,6 +93,7 @@ if not getgenv().DeadzoneTab then
 			--
 			if not getgenv().Rainbowfied then
 				spawn(function()
+					getgenv().Rainbowfied = true
 					while getgenv().Rainbowfied do
 						--SKIN-COLOR
 						local args = {
@@ -126,7 +127,7 @@ if not getgenv().DeadzoneTab then
 					end
 				end)
 			else
-				getgenv().Ranbowfied = false
+				getgenv().Ranbowfied = Value
 			end
 			--
 		end,
