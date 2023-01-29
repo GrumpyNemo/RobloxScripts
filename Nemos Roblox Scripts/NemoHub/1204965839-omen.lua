@@ -1,6 +1,6 @@
 local vers = "0.1"
 if not getgenv().WolvesLife3Tab then
-	getgenv().WolvesLife3Tab = getgenv().NemoHubWindow:CreateTab("Wolve's Life 3".." | "..vers, "66607661")
+	getgenv().WolvesLife3Tab = getgenv().NemoHubWindow:CreateTab("Wolve's Life 3".." | "..vers, "838934134")
 	----------------------------------------------
     --Locals or wtv
 local LocalPlayer = game.Players.LocalPlayer
