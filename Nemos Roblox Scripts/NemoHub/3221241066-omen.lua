@@ -128,7 +128,7 @@ if not getgenv().DeadzoneTab then
 					end
 				end)
 			else
-				getgenv().Ranbowfied = Value
+				getgenv().Rainbowfied = Value
 			end
 			--
 		end,
@@ -142,7 +142,7 @@ if not getgenv().DeadzoneTab then
 		end,
 	})
 	----------------------------------------------
-	spawn(function()while getgenv().MouseIconToggle == value do game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle wait(.25) end end)
+	spawn(function()while getgenv().MouseIconToggle == true do game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle wait(.25) end end)
 else
 	getgenv().Rayfield:Notify({
 		Title = "[ Deadzone Classic ]",
