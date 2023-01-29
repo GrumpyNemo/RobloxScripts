@@ -153,7 +153,7 @@ SpeedSrc.SpeedHack = function()
 			if Humanoid.Health <= 0 and not PlayerIsFrozen then
 				Humanoid.AutoRotate = true
 			end
-			Humanoid.JumpPower = o
+			Humanoid.JumpPower = 0
 			end
 		end
 	end)
