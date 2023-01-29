@@ -1,5 +1,5 @@
 if not getgenv().DeadzoneTab then
-getgenv().DeadzoneTab = getgenv().NemoHubWindow:CreateTab("Deadzone Classic", 2716943898)
+getgenv().DeadzoneTab = getgenv().NemoHubWindow:CreateTab("Deadzone Classic", 11810057512)
 ----------------------------------------------
     if not getgenv().WalkSpeed or getgenv().JumpPower then
     getgenv().WalkSpeed = 16 --Players speed
