@@ -1,3 +1,4 @@
+local MatchGame = true
 getgenv().Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/libraries/CustomRayfieldUI.lua'))()
 getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 	Name = "Project C0FF1N",
@@ -27,3 +28,11 @@ local Button = ToolsTab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/NemoYield/main/source.lua'))()
    end,
 })
+---
+if MatchGame then
+    local pre = ("https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/")
+    local ext = ("-omen.lua")
+    local construct = (pre..game.PlaceId..ext)
+    wait()
+    loadstring(game:HttpGet(tostring(construct)))()
+end
