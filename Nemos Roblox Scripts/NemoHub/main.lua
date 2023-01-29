@@ -19,3 +19,11 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 })
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Forking \nshlex | Designing & Programming \niRay | Programming"})
+---
+local ToolsTab = getgenv().NemoHubWindow:CreateTab("Tools", 4483362458)
+local Button = ToolsTab:CreateButton({
+   Name = "Run NemoYield [Fork of Infinite Yield]",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/NemoYield/main/source.lua'))()
+   end,
+})
