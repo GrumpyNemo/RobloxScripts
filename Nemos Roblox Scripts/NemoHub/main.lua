@@ -28,7 +28,7 @@ local Button = ToolsTab:CreateButton({
    end,
 })
 ---
-if not getgenv().LaunchGames then
+if getgenv().LaunchGames then
     local pre = ("https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/")
     local ext = ("-omen.lua")
     local construct = (pre..game.PlaceId..ext)
