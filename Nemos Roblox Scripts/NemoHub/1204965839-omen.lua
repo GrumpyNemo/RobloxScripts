@@ -392,7 +392,7 @@ local UnlockMusicGuiButton = Tab:CreateButton({
     end,
 })
 local UnlockNameColorButton = Tab:CreateButton({
-    Name = "Unlock Name Color gui (if you wanna change desc color w/o viw)",
+    Name = "Unlock Name Color gui w/o viw",
     Callback = function()
         spawn(function() while wait(.5) do
 			if PlayerGui:FindFirstChild("MorphGUI") then else
