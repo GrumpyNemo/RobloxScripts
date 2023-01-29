@@ -149,7 +149,7 @@ SpeedSrc.SpeedHack = function()
 				end
 			end
 		else
-			if getgenv().PlayerFreezable then Humanoid.WalkSpeed = 0 end
+			if getgenv().PlayerFreezable then Humanoid.WalkSpeed = 0
 			if Humanoid.Health <= 0 and not PlayerIsFrozen then
 				Humanoid.AutoRotate = true
 			end
