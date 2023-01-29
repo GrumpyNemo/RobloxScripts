@@ -2,8 +2,11 @@ if not getgenv().DeadzoneTab then
 getgenv().DeadzoneTab = getgenv().NemoHubWindow:CreateTab("Deadzone Classic", 11810057512)
 ----------------------------------------------
     if not getgenv().WalkSpeed or getgenv().JumpPower then
-    getgenv().WalkSpeed = 16 --Players speed
-    getgenv().JumpPower = 26 --Players jump power
+        getgenv().WalkSpeed = 16 --Players speed
+        getgenv().JumpPower = 26 --Players jump power
+    end
+    if not getgenv().DeadzoneFlyToggle then
+        getgenv().DeadzoneFlyToggle = false
     end
     getgenv().LegBreakable = false --Disables (or enables) the player's leg to break
     getgenv().PlayerFreezable = false --Disables (or enables) the player being froze upon teleporting
@@ -64,10 +67,22 @@ local FreezeToggle = Tab:CreateToggle({
         CharPatch()
    end,
 })
-local Button = Tab:CreateButton({
-   Name = "Char Patch",
-   Callback = function()
-    CharPatch()
+local DeadzoneFly = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/Games/Deadzone/DeadzoneFly.lua'))()
+local KeybindFlyToggle = Tab:CreateToggle({
+   Name = "Keybind Fly",
+   CurrentValue = getgenv().DeadzoneFlyToggle,
+   Flag = "DeadzoneFlyToggle", 
+   Callback = function(Value)
+        getgenv().DeadzoneFlyToggle = Value
+   end,
+})
+local SetFlyKeybind = Tab:CreateKeybind({
+    Name = "Set fly key",
+    CurrentKeybind = "G",
+    HoldToInteract = false,
+    Flag = "SetFlyingKeybind", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Keybind)
+        DeadzoneFly.flytoggle(false)
     end,
 })
 ----------------------------------------------
