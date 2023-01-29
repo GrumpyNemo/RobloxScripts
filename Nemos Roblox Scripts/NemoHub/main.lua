@@ -27,6 +27,20 @@ local Button = ToolsTab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/NemoYield/main/source.lua'))()
    end,
 })
+local Button = ToolsTab:CreateButton({
+   Name = "Hydroxide",
+   Callback = function()
+   	local owner = "Upbolt"
+	local branch = "revision"
+
+	local function webImport(file)
+    		return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+	end
+
+	webImport("init")
+	webImport("ui/main")
+   end,
+})
 ---
 if getgenv().LaunchGames then
     local pre = ("https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/")
