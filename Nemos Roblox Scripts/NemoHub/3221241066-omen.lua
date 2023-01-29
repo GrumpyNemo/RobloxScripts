@@ -1,5 +1,6 @@
+local vers = "0.7"
 if not getgenv().DeadzoneTab then
-	getgenv().DeadzoneTab = getgenv().NemoHubWindow:CreateTab("Deadzone Classic", "2716943887")
+	getgenv().DeadzoneTab = getgenv().NemoHubWindow:CreateTab("Deadzone Classic".." | "..vers, "2716943887")
 	----------------------------------------------
 	if not getgenv().WalkSpeed or getgenv().JumpPower then
 		getgenv().WalkSpeed = 16 --Players speed
@@ -92,8 +93,8 @@ if not getgenv().DeadzoneTab then
 		Callback = function(Value)
 			--
 			if not getgenv().Rainbowfied then
+				getgenv().Rainbowfied = true
 				spawn(function()
-					getgenv().Rainbowfied = true
 					while getgenv().Rainbowfied do
 						--SKIN-COLOR
 						local args = {
