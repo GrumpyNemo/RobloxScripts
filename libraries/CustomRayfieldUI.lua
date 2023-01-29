@@ -22,8 +22,8 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextFont = "Creepster", -- Default will use the various font faces used across Rayfield
-			TextColor = Color3.fromRGB(255, 128, 0),
+			TextFont = "Default", -- Default will use the various font faces used across Rayfield
+			TextColor = Color3.fromRGB(240, 240, 240),
 			
 			Background = Color3.fromRGB(25, 25, 25),
 			Topbar = Color3.fromRGB(34, 34, 34),
