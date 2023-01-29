@@ -1,21 +1,21 @@
 local MatchGame = true
 getgenv().Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/libraries/CustomRayfieldUI.lua'))()
 getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
-	Name = "Project C0FF1N",
-	LoadingTitle = "Loading: Project C0FF1N",
+	Name = "0M3N | GUI",
+	LoadingTitle = "Loading: 0M3N'S RES0URCES & M0DULES.",
 	LoadingSubtitle = '"Who are you?"',
 	ConfigurationSaving = {
 		Enabled = true,
-		FolderName = "C0FF1N",
+		FolderName = "0M3N",
 		FileName = "C0NF1G"
 	},
 	KeySystem = true,
 	KeySettings = {
-		Title = "Project C0FF1N | Script Hub",
+		Title = "Project 0M3N | Key Identifier",
 		Subtitle = "Input Required",
-		Note = "Please input the key you have recieved.",
+		Note = "Please input the 0M3N key you have recieved.",
 		SaveKey = true,
-		Key = "N3M0"
+		Key = "obey"
 	}
 })
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
