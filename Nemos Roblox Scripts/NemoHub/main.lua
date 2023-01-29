@@ -22,7 +22,7 @@ local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Cont
 ---
 local ToolsTab = getgenv().NemoHubWindow:CreateTab("Tools", 10885640682)
 local Button = ToolsTab:CreateButton({
-   Name = "Run NemoYield [Fork of Infinite Yield]",
+   Name = "NemoYield [Fork of Infinite Yield]",
    Callback = function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/NemoYield/main/source.lua'))()
    end,
