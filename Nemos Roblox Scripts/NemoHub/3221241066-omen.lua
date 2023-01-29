@@ -90,10 +90,11 @@ local MouseIconToggle = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "MouseIconToggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-        game:GetService("UserInputService").MouseIconEnabled = Value
+                getgenv().MouseIconToggle = value
    end,
 })
 ----------------------------------------------
+spawn(function()while true do game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle wait(.25) end)
 else
 getgenv().Rayfield:Notify({
    Title = "[ Deadzone Classic ]",
