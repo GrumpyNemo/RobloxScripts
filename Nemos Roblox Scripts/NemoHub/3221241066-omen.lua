@@ -138,11 +138,22 @@ if not getgenv().DeadzoneTab then
 		CurrentValue = false,
 		Flag = "MouseIconToggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
-			getgenv().MouseIconToggle = value
+			--
+			if not getgenv().MouseIconToggle then
+				getgenv().MouseIconToggle = true
+				spawn(function()
+					while getgenv().MouseIconToggle do
+						game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle
+						wait()
+					end
+				end)
+			else
+				getgenv().MouseIconToggle = Value
+			end
+			--
 		end,
 	})
 	----------------------------------------------
-	spawn(function()while getgenv().MouseIconToggle == true do game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle wait(.25) end end)
 else
 	getgenv().Rayfield:Notify({
 		Title = "[ Deadzone Classic ]",
