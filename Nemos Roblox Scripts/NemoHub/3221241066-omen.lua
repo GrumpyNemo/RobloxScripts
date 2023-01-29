@@ -159,6 +159,6 @@ else
 		Title = "[ Deadzone Classic ]",
 		Content = "Script already injected!",
 		Duration = 6.5,
-		Image = 4483362458
+		Image = 11401835376
 	})
 end
