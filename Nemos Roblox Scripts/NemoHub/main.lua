@@ -21,6 +21,7 @@ local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
 ---
 local ToolsTab = getgenv().NemoHubWindow:CreateTab("Tools", 10885640682)
+local Section = ToolsTab:CreateSection('Resources I use to "enchance my exploiting."')
 local Button = ToolsTab:CreateButton({
    Name = "NemoYield [Fork of Infinite Yield]",
    Callback = function()
@@ -41,6 +42,7 @@ local Button = ToolsTab:CreateButton({
 	webImport("ui/main")
    end,
 })
+local Section = ToolsTab:CreateSection("Other")
 ---
 if getgenv().LaunchGames then
     local pre = ("https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/")
