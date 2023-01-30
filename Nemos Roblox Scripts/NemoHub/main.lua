@@ -13,6 +13,7 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 		Title = "Project 0M3N | Key Identifier",
 		Subtitle = "Input Required",
 		Note = "Please input the 0M3N key you have recieved.",
+		FileName = "0M3N_Key",
 		SaveKey = true,
 		GrabKeyFromSite = true,
 		Key = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/thisisnothere.lua'))()
