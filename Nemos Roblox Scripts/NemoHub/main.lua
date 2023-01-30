@@ -21,7 +21,7 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
 spawn(function()
-	while wait(.55) do
+	while true do
 		if game:GetService("UserInputService").MouseIconEnabled == false then
 		local MouseIconToggle = HomeTab:CreateToggle({
 		Name = "Mouse Visibility",
@@ -37,14 +37,15 @@ spawn(function()
 						wait()
 						end
 					end)
+					break;
 				else
 					getgenv().MouseIconToggle = Value
-				break;
 			end
 			--
 			end,
 		})
 	end
+	wait(15)
 	end
 end)
 ---
