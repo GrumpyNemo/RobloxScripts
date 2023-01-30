@@ -35,14 +35,14 @@ spawn(function()
 					while getgenv().MouseIconToggle do
 						game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle
 						wait()
-						end
-					end)
-					break;
-				else
-					getgenv().MouseIconToggle = Value
+					end
+				end)
+				break;
+			else
+				getgenv().MouseIconToggle = Value
 			end
 			--
-			end,
+		end,
 		})
 	end
 	wait(15)
