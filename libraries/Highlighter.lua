@@ -8,7 +8,6 @@ ModelHighlightModule.AlreadyHighlighted = {}
 function ModelHighlightModule.highlightModel(model,RGBColor)
     if model.ClassName == "Model" then
     pcall(function()
-        if target.Character then
             if not ModelHighlightModule.AlreadyHighlighted[target] then
                 local ModelHighlight = Instance.new("Highlight", CoreGui)
                 ModelHighlight.Name = model.Name
@@ -19,7 +18,6 @@ function ModelHighlightModule.highlightModel(model,RGBColor)
             else
                 ModelHighlightModule.AlreadyHighlighted[target].FillColor = RGBColor
             end
-        end
     end)
     end
 end
