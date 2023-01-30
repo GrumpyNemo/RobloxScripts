@@ -14,7 +14,8 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 		Subtitle = "Input Required",
 		Note = "Please input the 0M3N key you have recieved.",
 		SaveKey = true,
-		Key = "obey"
+		GrabKeyFromSite = true,
+		Key = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/thisisnothere.lua'))()
 	}
 })
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
