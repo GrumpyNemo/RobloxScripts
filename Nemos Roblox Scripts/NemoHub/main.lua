@@ -40,6 +40,7 @@ spawn(function()
 				end)
 			else
 				getgenv().MouseIconToggle = Value
+				game:GetService("UserInputService").MouseIconEnabled = Value
 			end
 			--
 		end,
