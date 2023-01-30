@@ -20,6 +20,28 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 })
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
+if game:GetService("UserInputService").MouseIconEnabled == false then
+local MouseIconToggle = HomeTab:CreateToggle({
+		Name = "Mouse Visibility",
+		CurrentValue = false,
+		Flag = "MouseIconToggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			--
+			if not getgenv().MouseIconToggle then
+				getgenv().MouseIconToggle = true
+				spawn(function()
+					while getgenv().MouseIconToggle do
+						game:GetService("UserInputService").MouseIconEnabled = getgenv().MouseIconToggle
+						wait()
+					end
+				end)
+			else
+				getgenv().MouseIconToggle = Value
+			end
+			--
+		end,
+	})
+end
 ---
 local ToolsTab = getgenv().NemoHubWindow:CreateTab("Tools", 10885640682)
 local Section = ToolsTab:CreateSection('Resources I use to "enchance my exploiting."')
