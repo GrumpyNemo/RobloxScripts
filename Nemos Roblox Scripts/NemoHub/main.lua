@@ -39,6 +39,7 @@ spawn(function()
 					end)
 				else
 					getgenv().MouseIconToggle = Value
+				break;
 			end
 			--
 			end,
