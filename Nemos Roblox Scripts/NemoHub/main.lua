@@ -37,13 +37,13 @@ spawn(function()
 						wait()
 					end
 				end)
-				break;
 			else
 				getgenv().MouseIconToggle = Value
 			end
 			--
 		end,
 		})
+		break
 	end
 	wait(15)
 	end
