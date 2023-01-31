@@ -31,6 +31,15 @@ getgenv().OmenPrint2Console = function(type,text)
 	end
 	end
 end
+local function getchildrenofclass(a, b)
+    local c = {}
+    for i, v in ipairs(a:GetChildren()) do
+        if v.ClassName == b then
+            table.insert(c, v)
+        end
+    end
+    return c
+end
 local highlightLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/libraries/Highlighter.lua'))()
 local function HighlightPlayer(TBH,color)
     if TBH.ClassName == "Player" then
@@ -130,7 +139,15 @@ Callback = function(Value)
 getgenv().UniversalESP = true
 
 spawn(function()
+    while getgenv().ESPInterval+.01 do
     
+    for a,p in pairs(game.Players:GetPlayers()) do
+        if not table.find(getchildrenofclass(game.CoreGui,"Highlight"),p.Name) then
+            HighlightPlayer(p)
+        end
+    end
+
+end
     while getgenv().UniversalESP do
         
         local Players = game:GetService("Players"):GetPlayers()
