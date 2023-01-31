@@ -31,6 +31,7 @@ getgenv().OmenPrint2Console = function(type,text)
 	end
 	end
 end
+local highlightLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/libraries/Highlighter.lua'))()
 local function HighlightPlayer(TBH,color)
     if TBH.ClassName == "Player" then
         TBHChar = TBH.Character
