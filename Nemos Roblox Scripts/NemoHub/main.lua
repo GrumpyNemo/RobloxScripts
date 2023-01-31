@@ -1,3 +1,8 @@
+if getgenv().omen_advrefresh then
+	getgenv().DeadzoneTab = nil
+	getgenv().WolvesLife3Tab = nil
+	getgenv().MnSTab = nil
+end
 getgenv().Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/libraries/CustomRayfieldUI.lua'))()
 getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 	Name = "0M3N | GUI",
@@ -19,6 +24,16 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 		Key = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/thisisnothere.lua'))()
 	}
 })
+getgenv().OmenPrint2Console = function(type,text)
+	local typesimplf = string.lower(type)
+	if type == "warn" then
+	warn('[W4RN] 0M3N - "'..tostring(text)..'"')
+	else if type == "error" then
+	error('[3RR0R] 0M3N - "'..tostring(text)..'"')
+	else
+	print('[PR1NT] 0M3N - "'..tostring(text)..'"')
+	end
+end
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
 spawn(function()
@@ -131,4 +146,17 @@ if getgenv().LaunchGames then
     local construct = (pre..game.PlaceId..ext)
     wait()
     loadstring(game:HttpGet(tostring(construct)))()
+end
+if getgenv().printcreds then
+getgenv().OmenPrint2Console("warn","Hi, I'm Nemo. I used the Rayfield UI Library and made scripts for it, so Omen. My GUI.")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("print","PS.")
+getgenv().OmenPrint2Console("print","Thank you for using my script.")
 end
