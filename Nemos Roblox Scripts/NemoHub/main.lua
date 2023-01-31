@@ -163,7 +163,7 @@ if getgenv().LaunchGames then
     local ext = ("-omen.lua")
     local construct = (pre..game.PlaceId..ext)
     wait()
-    loadstring(game:HttpGet(tostring(construct)))()
+    pcall(function()loadstring(game:HttpGet(tostring(construct)))()end)
 end
 if getgenv().printcreds then
 getgenv().OmenPrint2Console("blue","Hi, I'm Nemo. I used the Rayfield UI Library and made scripts for it, so Omen. My GUI.")
