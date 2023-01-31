@@ -23,8 +23,8 @@ getgenv().OmenPrint2Console = function(type,text)
 	local typesimplf = string.lower(type)
 	if type == "warn" then
 	warn('[W4RN] 0M3N - "'..tostring(text)..'"')
-	else if type == "error" then
-	error('[3RR0R] 0M3N - "'..tostring(text)..'"')
+	else if type == "blue" then
+	game:GetService('TestService'):Message('[C0NSOLE] 0M3N - "'..tostring(text)..'"')
 	else
 	print('[PR1NT] 0M3N - "'..tostring(text)..'"')
 	end
@@ -149,15 +149,15 @@ if getgenv().LaunchGames then
     loadstring(game:HttpGet(tostring(construct)))()
 end
 if getgenv().printcreds then
-getgenv().OmenPrint2Console("warn","Hi, I'm Nemo. I used the Rayfield UI Library and made scripts for it, so Omen. My GUI.")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
-getgenv().OmenPrint2Console("error","V")
+getgenv().OmenPrint2Console("blue","Hi, I'm Nemo. I used the Rayfield UI Library and made scripts for it, so Omen. My GUI.")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
+getgenv().OmenPrint2Console("warn","V")
 getgenv().OmenPrint2Console("print","PS.")
-getgenv().OmenPrint2Console("print","Thank you for using my script.")
+getgenv().OmenPrint2Console("blue","Thank you for using my script.")
 end
