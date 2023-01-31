@@ -28,6 +28,7 @@ getgenv().OmenPrint2Console = function(type,text)
 	else
 	print('[PR1NT] 0M3N - "'..tostring(text)..'"')
 	end
+	end
 end
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
