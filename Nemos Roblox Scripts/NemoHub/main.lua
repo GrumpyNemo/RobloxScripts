@@ -129,7 +129,7 @@ spawn(function()
             
         end
         
-    wait()
+    wait(1)
         
     end
         
