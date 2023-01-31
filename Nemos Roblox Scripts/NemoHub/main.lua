@@ -73,6 +73,56 @@ local Button = ToolsTab:CreateButton({
 	webImport("ui/main")
    end,
 })
+local Section = ToolsTab:CreateSection("Universal Scripts")
+local ESPToggle = ToolsTab:CreateToggle({
+Name = "Nemo's Universal ESP",
+CurrentValue = false,
+Flag = "UniversalEspToggle", 
+Callback = function(Value)
+    
+spawn(function()
+        
+    while getgenv().MnSESP do
+        
+        for i,v in pairs(game.Players:GetPlayers()) do
+            
+            if v ~= game.Players.LocalPlayer then
+                
+                HighlightPlayer(v)
+                
+            end
+            
+        end
+        
+    wait()
+        
+    end
+        
+end)
+
+if not getgenv().MnSESP then
+    
+    getgenv().MnSESP = true
+    
+    else
+    
+    getgenv().MnSESP = Value
+    spawn(function()
+        
+    for i,v in pairs(game.CoreGui:GetChildren()) do
+        if v.ClassName == "Highlight" then
+            if Value ~= "true" then
+                v:Destroy()
+            end
+        end
+    end
+    
+    end)
+    
+end
+
+end,
+})
 local Section = ToolsTab:CreateSection("Other")
 ---
 if getgenv().LaunchGames then
