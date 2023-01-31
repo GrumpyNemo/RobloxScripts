@@ -47,6 +47,7 @@ local function HighlightPlayer(TBH,color)
         
     end
 end
+getgenv().ESPInterval = .2
 ---
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
@@ -109,48 +110,70 @@ local UniversalSAim = ToolsTab:CreateButton({
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua'))()
    end,
 })
-local ESPToggle = ToolsTab:CreateToggle({
-Name = "Nemo's Universal ESP",
+local UniESPSlider = ToolsTab:CreateSlider({
+   Name = "Nemo's Uni-ESP Interval",
+   Range = {0, 10},
+   Increment = .1,
+   Suffix = "seconds",
+   CurrentValue = getgenv().ESPInterval,
+   Flag = "UniEspSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+    getgenv().ESPInterval = Value
+end,
+})
+local UniESPToggle = ToolsTab:CreateToggle({
+Name = "Nemo's Uni-ESP",
 CurrentValue = false,
-Flag = "UniversalEspToggle", 
+Flag = "UniEspToggle", 
 Callback = function(Value)
     
+getgenv().UniversalESP = true
+
 spawn(function()
-game.Players.PlayerAdded:Connect(function(v)
-    local Player = game.Players[Player]
-		local v = Player
-		HighlightPlayer(v)						
-	end)
-    while getgenv().MnSESP do
+    
+    while getgenv().UniversalESP do
         
-        for i,v in pairs(game.Players:GetPlayers()) do
+        local Players = game:GetService("Players"):GetPlayers()
+        
+        for _,P in pairs(Players) do
             
-            if v ~= game.Players.LocalPlayer then
+            if P.ClassName == "Player" and P.Character and P ~= game.Players.LocalPlayer and getgenv().UniversalESP then
                 
-                HighlightPlayer(v)
+                HighlightPlayer(P)
                 
             end
             
         end
         
-    wait(1)
+        wait(getgenv().ESPInterval)
+    
+    end
+
+end)
+if not getgenv().UniversalESP then
+    
+    getgenv().UniversalESP = true
+    local Players = game:GetService("Players"):GetPlayers()
+        
+    for _,P in pairs(Players) do
+        
+        if P.ClassName == "Player" and P.Character and P ~= game.Players.LocalPlayer then
+            
+            HighlightPlayer(P)
+        
+        end
         
     end
-        
-end)
-
-if not getgenv().MnSESP then
-    
-    getgenv().MnSESP = true
     
     else
     
-    getgenv().MnSESP = Value
+    getgenv().UniversalESP = Value
+    wait()
     spawn(function()
         
     for i,v in pairs(game.CoreGui:GetChildren()) do
         if v.ClassName == "Highlight" then
-            if Value ~= "true" then
+            if Value ~= "true" and not getgenv().UniversalESP then
                 v:Destroy()
             end
         end
@@ -159,7 +182,6 @@ if not getgenv().MnSESP then
     end)
     
 end
-
 end,
 })
 local Section = ToolsTab:CreateSection("Other")
