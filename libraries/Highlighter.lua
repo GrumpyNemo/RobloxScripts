@@ -9,7 +9,7 @@ local LP = Players.LocalPlayer
 
 function ModelHighlightModule.highlightModel(model,RGBColor)
     
-    if model.ClassName == "Model" then
+    if model.ClassName and string.lower(model.ClassName) == "model" then
         
     pcall(function()
         
