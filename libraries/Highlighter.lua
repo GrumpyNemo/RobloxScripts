@@ -8,11 +8,9 @@ local LP = Players.LocalPlayer
 ---
 
 function ModelHighlightModule.highlightModel(model,RGBColor)
-    
-    if model.ClassName and string.lower(model.ClassName) == "model" then
         
     pcall(function()
-        
+        if model.ClassName and string.lower(model.ClassName) == "model" then
             if not CoreGui:FindFirstChild(model.Name) then
                 
                 local ModelHighlight = Instance.new("Highlight", CoreGui)
@@ -27,10 +25,8 @@ function ModelHighlightModule.highlightModel(model,RGBColor)
                 CoreGui:FindFirstChild(model.Name).Adornee = model
                 
             end
-            
+            end
     end)
-    
-    end
 end
 
 
