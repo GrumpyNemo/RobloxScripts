@@ -8,7 +8,7 @@ local LP = Players.LocalPlayer
 ---
 
 function ModelHighlightModule.highlightModel(model,RGBColor)
-        if model.ClassName and string.lower(model.ClassName) == "model" then
+        if model.ClassName and model.ClassName == "Model" then
     pcall(function()
             if not CoreGui:FindFirstChild(model.Name) then
                 
