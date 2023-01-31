@@ -19,6 +19,7 @@ getgenv().NemoHubWindow = getgenv().Rayfield:CreateWindow({
 		Key = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/thisisnothere.lua'))()
 	}
 })
+---
 getgenv().OmenPrint2Console = function(type,text)
 	local typesimplf = string.lower(type)
 	if type == "warn" then
@@ -30,6 +31,22 @@ getgenv().OmenPrint2Console = function(type,text)
 	end
 	end
 end
+local function HighlightPlayer(TBH,color)
+    if TBH.ClassName == "Player" then
+        TBHChar = TBH.Character
+        if not color then
+            if TBH.TeamColor.Color then
+                Color = TBH.TeamColor.Color
+                else
+                Color = Color3.fromRGB(255,255,255)
+            end
+        end
+        
+        highlightLib.highlightModel(TBHChar,Color)
+        
+    end
+end
+---
 local HomeTab = getgenv().NemoHubWindow:CreateTab("Home", 4483362458)
 local Paragraph = HomeTab:CreateParagraph({Title = "Credits to Developers", Content = "Nemo | Using UI Library \nshlex & iRay | Making Rayfield UI"})
 spawn(function()
