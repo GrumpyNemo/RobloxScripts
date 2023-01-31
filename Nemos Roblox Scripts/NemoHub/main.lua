@@ -103,6 +103,12 @@ local Button = ToolsTab:CreateButton({
    end,
 })
 local Section = ToolsTab:CreateSection("Universal Scripts")
+local Button = ToolsTab:CreateButton({
+   Name = "Hydroxide",
+   Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua'))()
+   end,
+})
 local ESPToggle = ToolsTab:CreateToggle({
 Name = "Nemo's Universal ESP",
 CurrentValue = false,
