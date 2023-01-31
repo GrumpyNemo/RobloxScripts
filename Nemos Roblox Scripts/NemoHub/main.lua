@@ -43,7 +43,7 @@ local function HighlightPlayer(TBH,color)
             end
         end
         
-        highlightLib.highlightModel(TBHChar,Color)
+        pcall(function()highlightLib.highlightModel(TBHChar,Color)end)
         
     end
 end
