@@ -103,8 +103,8 @@ local Button = ToolsTab:CreateButton({
    end,
 })
 local Section = ToolsTab:CreateSection("Universal Scripts")
-local Button = ToolsTab:CreateButton({
-   Name = "Hydroxide",
+local UniversalSAim = ToolsTab:CreateButton({
+   Name = "Universal (tweaks needed) Silent-Aim By Averiias",
    Callback = function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua'))()
    end,
