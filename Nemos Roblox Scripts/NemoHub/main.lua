@@ -116,7 +116,9 @@ Flag = "UniversalEspToggle",
 Callback = function(Value)
     
 spawn(function()
-        
+    game.Players.PlayerAdded:Connect(function(v)
+	HighlightPlayer(v)						
+    end)
     while getgenv().MnSESP do
         
         for i,v in pairs(game.Players:GetPlayers()) do
