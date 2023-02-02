@@ -208,9 +208,6 @@ end
 
 local TextGenerator = {}
 
-local traceryModule = script:FindFirstChild("Tracery")
-local Tracery = require(traceryModule)
-
 -- DICTIONARY. Used to store all the possible phrases and words used.
 local adDictionary = {
 	-- Origin: The starting point of every random text. Picks one of these phrases seperated by commas.
