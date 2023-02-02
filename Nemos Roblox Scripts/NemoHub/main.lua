@@ -142,7 +142,7 @@ spawn(function()
     while getgenv().ESPInterval+.01 do
     
     for a,p in pairs(game.Players:GetPlayers()) do
-        if not table.find(getchildrenofclass(game.CoreGui,"Highlight"),p.Name) then
+        if not table.find(getchildrenofclass(game.CoreGui,"Highlight"),p.Name) and p ~= game.Players.LocalPlayer and getgenv().UniversalESP then
             HighlightPlayer(p)
         end
         wait()
