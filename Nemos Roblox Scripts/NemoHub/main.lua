@@ -211,11 +211,15 @@ end,
 })
 local Section = ToolsTab:CreateSection("Other")
 ---
+if getgenv().BeautifyPlugin then
+	loadstring(game:HttpGet(tostring("https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/beautify-omen.lua")))()
+end
 if getgenv().LaunchGames then
 	if getgenv().omen_advrefresh then
 		getgenv().DeadzoneTab = nil
 		getgenv().WolvesLife3Tab = nil
 		getgenv().MnSTab = nil
+		getgenv().BeautifyTab = nil
 	end
     local pre = ("https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/")
     local ext = ("-omen.lua")
