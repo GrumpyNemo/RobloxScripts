@@ -145,6 +145,7 @@ spawn(function()
         if not table.find(getchildrenofclass(game.CoreGui,"Highlight"),p.Name) then
             HighlightPlayer(p)
         end
+        wait()
     end
 
 end
@@ -159,7 +160,7 @@ end
                 HighlightPlayer(P)
                 
             end
-            
+            wait()
         end
         
         wait(getgenv().ESPInterval)
