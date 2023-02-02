@@ -135,18 +135,23 @@ Name = "Nemo's Uni-ESP",
 CurrentValue = false,
 Flag = "UniEspToggle", 
 Callback = function(Value)
-    
 getgenv().UniversalESP = true
 
 spawn(function()
-    while getgenv().ESPInterval+.01 do
     
-    for a,p in pairs(game.Players:GetPlayers()) do
-        if not table.find(getchildrenofclass(game.CoreGui,"Highlight"),p.Name) and p ~= game.Players.LocalPlayer and getgenv().UniversalESP then
-            HighlightPlayer(p)
-        end
-        wait()
+while getgenv().ESPInterval+.01 do
+    
+for a,P in pairs(game.Players:GetPlayers()) do
+    
+    if not table.find(getchildrenofclass(game.CoreGui,"Highlight"),P.Name) and P.Character and P ~= game.Players.LocalPlayer and getgenv().UniversalESP then
+        
+        HighlightPlayer(P)
+        
     end
+    
+    wait()
+    
+end
 
 end
     while getgenv().UniversalESP do
@@ -160,7 +165,9 @@ end
                 HighlightPlayer(P)
                 
             end
+            
             wait()
+            
         end
         
         wait(getgenv().ESPInterval)
