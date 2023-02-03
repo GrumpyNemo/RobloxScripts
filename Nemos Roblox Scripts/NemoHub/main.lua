@@ -242,7 +242,7 @@ if getgenv().SecureMode then
 		end)
 	end
 end
-if getgenv().BeautifyPlugin then
+if getgenv().BeautifyPlugin and not getgenv().SecureMode then
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/beautify-omen.lua'))()
 end
 if getgenv().LaunchGames then
@@ -257,7 +257,7 @@ if getgenv().LaunchGames then
 	wait()
 	pcall(function()loadstring(game:HttpGet(tostring(construct)))()end)
 end
-if getgenv().printcreds then
+if getgenv().printcreds and not getgenv().SecureMode then
 	getgenv().OmenPrint2Console("blue","Hi, I'm Nemo. I used the Rayfield UI Library and made scripts for it, so Omen. My GUI.")
 	getgenv().OmenPrint2Console("warn","V")
 	getgenv().OmenPrint2Console("warn","V")
