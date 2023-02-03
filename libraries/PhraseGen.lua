@@ -238,16 +238,15 @@ local function FetchGrammar(whichGrammarName)
 end
 
 function TextGenerator.GetPhrase(player, whichGrammar,val)
-    if val == false or val == nil then
-        local grammar = FetchGrammar(whichGrammar)
+    if val == true then
+        local grammar = CreateGrammar(whichGrammar)
 	    local phrase = grammar.GenerateString("origin")
 		return phrase
 	    else
-	    local grammar = CreateGrammar(whichGrammar)
+        local grammar = FetchGrammar(whichGrammar)
 	    local phrase = grammar.GenerateString("origin")
 		return phrase
     end
-	return phrase
 end
 
 
