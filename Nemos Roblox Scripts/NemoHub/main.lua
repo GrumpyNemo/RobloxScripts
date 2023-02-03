@@ -231,9 +231,8 @@ if getgenv().SecureMode then
 		timeCommand = {"right now", " today", "this instant", "forever", "now","instantly","in a min","slowly in 2 minutes"}
 	}
 	
-	PhraseGen.GetPhrase(nil,Dictionary,true)
-	
 	local Gui = game.CoreGui:FindFirstChild("Rayfield")
+	
 	if Gui then
 		spawn(function()
 			while getgenv().SecureMode do
