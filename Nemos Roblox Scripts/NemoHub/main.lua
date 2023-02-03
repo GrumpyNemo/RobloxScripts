@@ -119,6 +119,7 @@ local UniversalSAim = ToolsTab:CreateButton({
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua'))()
 	end,
 })
+if not getgenv().SecureMode then
 local UniESPSlider = ToolsTab:CreateSlider({
 	Name = "Nemo's Uni-ESP Interval",
 	Range = {0, 10},
@@ -209,6 +210,7 @@ local UniESPToggle = ToolsTab:CreateToggle({
 		end
 	end,
 })
+end
 local Section = ToolsTab:CreateSection("Other")
 ---
 if getgenv().SecureMode then
@@ -227,7 +229,7 @@ if getgenv().SecureMode then
 		emotionAdjective = {"sad", "miserable", "sorrow-filled", "empty"},
 		verbCommand = {"need", "miss", "lack","crave","desire","want"},
 		verb = {"taste", "fear", "adore", "eat", "buy", "consume", "steal"},
-		noun = {"serverside", "prenup", "std", "tardis", "lightsaber", "gun","dildo","cryo-chamber","US Federal Currency Printer",""},
+		noun = {"serverside", "prenup", "std", "tardis", "lightsaber", "gun","dildo","cryo-chamber","US Federal Currency Printer","death"},
 		timeCommand = {"right now", " today", "this instant", "forever", "now","instantly","in a min","slowly in 2 minutes"}
 	}
 	
