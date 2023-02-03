@@ -211,6 +211,40 @@ local UniESPToggle = ToolsTab:CreateToggle({
 })
 local Section = ToolsTab:CreateSection("Other")
 ---
+if getgenv().SecureMode then
+	
+	local PhraseGen = loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/libraries/PhraseGen.lua'))()
+	
+	local Dictionary = {
+		-- Origin: The starting point of every random text. Picks one of these phrases seperated by commas.
+		origin = {"#phraseExclaim#", "#phraseDemand#"},
+		-- Phrases that can be used
+		phraseExclaim = "#verb.capitalize# our #productAdjective# #noun.s# #timeCommand#!",
+		phraseDemand = "You #verbCommand# #noun.s# in your #emotionAdjective# life #timeCommand#!",
+
+		-- General purpose words for any phrase. Used between all phrases. 
+		productAdjective = {"hot & sexy", "brand-new", "redesigned", "upgraded", "chic-magnet", "modern", "hoe-stealer", "steroid free", "new-fangled"},
+		emotionAdjective = {"sad", "miserable", "sorrow-filled", "empty"},
+		verbCommand = {"need", "miss", "lack","crave","desire","want"},
+		verb = {"taste", "fear", "adore", "eat", "buy", "consume", "steal"},
+		noun = {"serverside", "prenup", "std", "tardis", "lightsaber", "gun","dildo","cryo-chamber","US Federal Currency Printer",""},
+		timeCommand = {"right now", " today", "this instant", "forever", "now","instantly","in a min","slowly in 2 minutes"}
+	}
+	
+	PhraseGen.GetPhrase(nil,Dictionary,true)
+	
+	local Gui = game.CoreGui:FindFirstChild("Rayfield")
+	if Gui then
+		spawn(function()
+			while getgenv().SecureMode do
+				Gui.Name = PhraseGen.GetPhrase(nil,Dictionary,true)
+			wait(1.5)end
+		end)
+	end
+end
+if getgenv().BeautifyPlugin then
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/beautify-omen.lua'))()
+end
 if getgenv().LaunchGames then
 	if getgenv().omen_advrefresh then
 		getgenv().DeadzoneTab = nil
