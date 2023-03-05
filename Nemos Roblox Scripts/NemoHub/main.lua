@@ -243,9 +243,6 @@ if getgenv().SecureMode then
 		end)
 	end
 end
-if getgenv().BeautifyPlugin and not getgenv().SecureMode then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/GrumpyNemo/RobloxScripts/main/Nemos%20Roblox%20Scripts/NemoHub/beautify-omen.lua'))()
-end
 if getgenv().LaunchGames then
 	if getgenv().omen_advrefresh then
 		getgenv().DeadzoneTab = nil
