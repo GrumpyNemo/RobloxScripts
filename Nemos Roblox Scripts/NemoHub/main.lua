@@ -66,7 +66,7 @@ spawn(function()
 			local MouseIconToggle = HomeTab:CreateToggle({
 				Name = "Mouse Visibility",
 				CurrentValue = false,
-				Flag = "MouseIconToggle", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+				Flag = "MouseIconToggle",
 				Callback = function(Value)
 					--
 					if not getgenv().MouseIconToggle then
@@ -126,7 +126,7 @@ local UniESPSlider = ToolsTab:CreateSlider({
 	Increment = .1,
 	Suffix = "seconds",
 	CurrentValue = getgenv().ESPInterval,
-	Flag = "UniEspSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Flag = "UniEspSlider",
 	Callback = function(Value)
 		getgenv().ESPInterval = Value
 	end,
