@@ -9,7 +9,7 @@ if not getgenv().PrisonLifeTab then
 	local Paragraph = Tab:CreateParagraph({Title = "Grumpy Nemo's Prison Life Script", Content = "This is all my scripts for Prison Life"})
 local FadeGuiRemoveButton = Tab:CreateButton({
    Name = "Delete fadeFrame (dark transparent black gui that gets stuck)",
-   Flag = "FadeGuiButton", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "FadeGuiButton",
    Callback = function(Value)
         game.Players.LocalPlayer.PlayerGui.Home.fadeFrame:Destroy()
    end,
